@@ -1,0 +1,37 @@
+{
+  "appId": "com.elawyer.desktop",
+  "productName": "E-Lawyer Bot",
+  "directories": {
+    "buildResources": "resources",
+    "output": "build-output"
+  },
+  "files": [
+    "renderer-dist/**/*",
+    "dist-electron/**/*",
+    "package.json"
+  ],
+  "asarUnpack": [
+    "renderer-dist/**/*"
+  ],
+  "extraFiles": [],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": "x64"
+      },
+      {
+        "target": "portable",
+        "arch": "x64"
+      }
+    ],
+    "signAndEditExecutable": false
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "perMachine": false
+  }
+}
